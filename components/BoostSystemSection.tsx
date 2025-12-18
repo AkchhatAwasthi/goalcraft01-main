@@ -1,0 +1,70 @@
+"use client";
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+import { BoostSystemContent } from '@/data/growth-pages/types';
+
+interface BoostSystemSectionProps {
+    content: BoostSystemContent;
+}
+
+const BoostSystemSection: React.FC<BoostSystemSectionProps> = ({ content }) => {
+    return (
+        <section className="py-20 bg-[rgb(11,30,63)] text-white">
+            <div className="container mx-auto px-6 md:px-12 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="max-w-4xl mx-auto mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        {content.heading}
+                    </h2>
+                    <p className="text-lg text-gray-300">
+                        {content.subheading}
+                    </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-16">
+                    {content.features.map((feature, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
+                            className="flex flex-col items-center"
+                        >
+                            <div className="mb-6">
+                                <CheckCircle className="w-16 h-16 text-green-500 fill-green-500/20" />
+                            </div>
+                            <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
+                            <p className="text-gray-400 leading-relaxed max-w-xs mx-auto">
+                                {feature.description}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+                >
+                    <Link href="/contact">
+                        <button className="px-10 py-4 bg-[rgb(41,189,184)] text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ring-2 ring-offset-2 ring-offset-[rgb(11,30,63)] ring-cyan-500 cursor-pointer">
+                            {content.buttonText}
+                        </button>
+                    </Link>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
+export default BoostSystemSection;

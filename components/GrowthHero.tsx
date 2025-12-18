@@ -1,0 +1,94 @@
+"use client";
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { HeroContent } from '@/data/growth-pages/types';
+
+interface GrowthHeroProps {
+    content: HeroContent;
+}
+
+const GrowthHero: React.FC<GrowthHeroProps> = ({ content }) => {
+    return (
+        <div className="relative w-full h-[600px] md:h-[700px] flex items-center overflow-hidden bg-white/50">
+            {/* Background Elements matching HeroSection */}
+            <div className="absolute inset-0 cosmic-grid opacity-30"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full">
+                <div className="w-full h-full opacity-10 bg-primary blur-[120px]"></div>
+            </div>
+
+            {/* Content */}
+            <div className="container mx-auto px-6 md:px-12 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div className="max-w-3xl">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6"
+                        >
+                            {content.heading.line1} <br />
+                            <span className="text-red-500">{content.heading.highlightedBrand1}</span> & <span className="text-orange-500">{content.heading.highlightedBrand2}</span>.
+                            <br />
+                            {content.heading.line2}
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+                        >
+                            {content.subheading}
+                        </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        >
+                            <Link href="/contact">
+                                <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 bg-[rgb(41,189,184)] rounded-full hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 cursor-pointer">
+                                    <span className="mr-2">{content.buttonText}</span>
+                                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                    <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                </button>
+                            </Link>
+                        </motion.div>
+                    </div>
+
+                    {/* Hero Image */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        className="relative hidden md:block"
+                    >
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                            <img
+                                src={content.imageUrl}
+                                alt={content.imageAlt}
+                                className="w-full h-auto object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        {/* Floating elements */}
+                        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg animate-bounce">
+                            <div className="flex items-center gap-2">
+                                <span className="text-2xl">{content.floatingCard.emoji}</span>
+                                <div>
+                                    <p className="text-xs text-gray-500">{content.floatingCard.label}</p>
+                                    <p className="font-bold text-green-600">{content.floatingCard.value}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default GrowthHero;
