@@ -18,7 +18,7 @@ export const swiggyOrdersGrowthDehradunContent: GrowthPageContent = {
             'If you want to increase Swiggy orders in Dehradun, you need more than discounts. Our proven system improves rankings, menu scores, and conversions—helping Dehradun restaurants get consistent daily orders.',
         buttonText: 'Increase My Orders Now',
         imageUrl:
-            'https://github.com/AkchhatAwasthi/upscalers-images/blob/main/Create%20a%20clean,%20professional%20portfolio%20banner%20for%20a%20brand%20called%20Krazy%20for%20Nuts,%20a%20premium%20dry%20fruits%20and%20healthy%20snacks%20company.%20Use%20a%20light%20brown,%20beige,%20and%20warm%20earthy%20color%20palette%20inspired%20by%20natural%20nut%20tone.jpg?raw=true',
+            'https://github.com/AkchhatAwasthi/upscalers-images/blob/main/Design%20a%20minimal,%20professional%20marketing%20banner%20for%20a%20brand%20called%20GoalCraft._Use%20a%20clean%20off-white%20background%20with%20cyan%20and%20teal%20accents._The%20design%20should%20feel%20modern,%20premium,%20and%20data-driven.__Place%20bold,%20high-.jpg?raw=true',
         imageAlt: 'Increase Swiggy Orders in Dehradun',
         floatingCard: {
             emoji: '🚀',
