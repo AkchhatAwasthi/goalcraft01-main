@@ -30,7 +30,7 @@ const GrowthHero: React.FC<GrowthHeroProps> = ({ content }) => {
                             className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6"
                         >
                             {content.heading.line1} <br />
-                            <span className="text-red-500">{content.heading.highlightedBrand1}</span> & <span className="text-orange-500">{content.heading.highlightedBrand2}</span>.
+                            <span className="text-red-500">{content.heading.highlightedBrand1}</span> <span className="text-orange-500">{content.heading.highlightedBrand2}</span>
                             <br />
                             {content.heading.line2}
                         </motion.h1>
