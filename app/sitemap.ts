@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(post.publishedDate),
         changeFrequency: 'monthly',
-        priority: 0.7,
+        priority: post.category.includes('Digital Marketing') || post.category.includes('Restaurant Marketing') ? 0.9 : 0.7,
     }))
 
     return [
