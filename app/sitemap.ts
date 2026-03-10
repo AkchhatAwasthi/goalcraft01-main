@@ -106,6 +106,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.9,
         },
+        // Gurgaon Pages
+        {
+            url: `${baseUrl}/restaurant-consultant-gurgaon`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/restaurant-marketing-consultant-gurgaon`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/swiggy-zomato-ranking-consultant-gurgaon`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
         ...blogEntries,
     ]
 }
