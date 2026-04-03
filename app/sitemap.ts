@@ -108,6 +108,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         // Gurgaon Pages
         {
+            url: `${baseUrl}/best-restaurant-consultant-in-gurgaon`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/restaurant-consultant-gurgaon`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
