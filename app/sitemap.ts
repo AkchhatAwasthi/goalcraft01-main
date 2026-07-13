@@ -38,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         // Restaurant Consultant Pages
         {
+            url: `${baseUrl}/best-restaurant-consultant-in-india`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 1.0,
+        },
+        {
             url: `${baseUrl}/best-restaurant-consultant-in-dehradun`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
