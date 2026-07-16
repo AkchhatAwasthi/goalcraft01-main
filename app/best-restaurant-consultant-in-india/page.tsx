@@ -161,8 +161,8 @@ export default function BestRestaurantConsultantIndia() {
         },
         {
             eyebrow: "Multi-City QSR — Pan-India",
-            name: "Moets Lapinoz",
-            body: "We handle complete restaurant consulting and platform growth for Moets Lapinoz across their India-wide presence — from unit economics to aggregator ranking strategy at scale."
+            name: "M.O.E.T.S",
+            body: "We handle complete restaurant consulting and platform growth for M.O.E.T.S across their India-wide presence — from unit economics to aggregator ranking strategy at scale."
         },
         {
             eyebrow: "Sweets & Mithai Brand — Lucknow",
