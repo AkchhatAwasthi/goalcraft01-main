@@ -156,13 +156,13 @@ export default function BestRestaurantConsultantIndia() {
     const clientCards = [
         {
             eyebrow: "QSR Chain — Pan-India",
-            name: "Lapinos",
-            body: "GoalCraft manages end-to-end Zomato & Swiggy growth strategy for Lapinos across all their outlets in India — covering listing optimisation, menu restructuring, and delivery performance across multiple city clusters."
+            name: "La Pinoz Pizza",
+            body: "GoalCraft manages end-to-end Zomato & Swiggy growth strategy for La Pinoz Pizza across all their outlets in India — covering listing optimisation, menu restructuring, and delivery performance across multiple city clusters."
         },
         {
-            eyebrow: "Multi-City QSR — Pan-India",
+            eyebrow: "Fine Dine-In",
             name: "M.O.E.T.S",
-            body: "We handle complete restaurant consulting and platform growth for M.O.E.T.S across their India-wide presence — from unit economics to aggregator ranking strategy at scale."
+            body: "We handle complete restaurant consulting and platform growth for M.O.E.T.S — from unit economics to aggregator ranking strategy at scale."
         },
         {
             eyebrow: "Sweets & Mithai Brand — Lucknow",
